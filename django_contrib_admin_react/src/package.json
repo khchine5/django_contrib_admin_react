@@ -1,0 +1,39 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/static/django_contrib_admin_react/",
+  "dependencies": {
+    "@material-ui/core": "^4.7.1",
+    "babel-loader": "^8.0.6",
+    "material-ui": "^0.20.2",
+    "ra-data-drf": "^2.0.0",
+    "react": "^16.12.0",
+    "react-admin": "^3.0.2",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.2.0",
+    "universal-cookie": "^4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && (rm -rf ../static/django_contrib_admin_react || true) && sed 's/=\\//=\\/static\\//g' build/index.html > ../templates/django_contrib_admin_react/index.html  && mv build/ ../static/django_contrib_admin_react",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
+}
